@@ -30,19 +30,19 @@ void printbin(int8 *input, const int16 size){
 int main(){
     Arcfour *rc4;
     int16 skey, stext;
-    int8 *key, *from, *to, *encrypted, *decrypted;
+    char *key, *from, *to, *encrypted, *decrypted;
 
-    key = (char *)"tomatoes"; // change to RSA 2048 keygen later
-    skey = strlen((char *)key);
+    key = "tomatoes"; // change to RSA 2048 keygen later
+    skey = strlen(key);
 
-    from = (char *)"Shall I compare thee to a summer's day?";
-    stext = strlen((char *)from);
+    from = "Shall I compare thee to a summer's day?";
+    stext = strlen(from);
 
     printf("Intializing encryption..."); F;
     rc4 = rc4init(key, skey); // check if it returns 0 in prod, cause of malloc checking
     printf("done\n");
 
-    printf("'%s'\n ->",(char *) from);
+    printf("'%s'\n ->", from);
     //encrypted = rc4encrypt(from, stext);
     printbin(key, skey);
     return 0;
