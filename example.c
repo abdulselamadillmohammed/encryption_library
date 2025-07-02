@@ -44,6 +44,6 @@ int main(){
 
     printf("'%s'\n ->", from);
     //encrypted = rc4encrypt(from, stext);
-    printbin(key, skey);
+    printbin((int8 *) key, skey);
     return 0;
 }
