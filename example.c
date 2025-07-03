@@ -29,7 +29,7 @@ void printbin(int8 *input, const int16 size){
 
 
 int main(){
-    //Arcfour *rc4;
+    Arcfour *rc4;
     int16 skey, stext;
     char *key, *from, *to, *encrypted, *decrypted;
 
@@ -45,11 +45,11 @@ int main(){
     stext = strlen(from);
 
     printf("Intializing encryption..."); F;
-    //rc4 = rc4init(key, skey); // check if it returns 0 in prod, cause of malloc checking
+    rc4 = rc4init(key, skey); // check if it returns 0 in prod, cause of malloc checking
     printf("done\n");
 
     printf("'%s'\n ->", from);
     //encrypted = rc4encrypt(from, stext);
-    printbin((int8 *) key, skey);
+    printbin(rc4->s, skey);
     return 0;
 }

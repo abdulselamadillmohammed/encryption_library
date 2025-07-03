@@ -21,7 +21,7 @@ Arcfour *rc4init(int8 *key, int16 size){
     for (p->i = 0; p->i < 256; p->i++)
         p->s[p->i] = p->i;
         
-    for (p->i = 0; p->i < 256; p->i++)
+    for (p->i = 0; p->i < 256; p->i++){
         tmp1 = p->i % size;
         tmp2 = p->j + p->s[p->i] + key[tmp2];
         p->j = tmp2 % 256;
@@ -30,4 +30,9 @@ Arcfour *rc4init(int8 *key, int16 size){
         tmp2 = p->s[p->j];
         p->s[p->i] = tmp2;
         p->s[p->j] = tmp1;
-    };
+    }
+    p->i = p->j = 0;
+
+    return p;
+
+};
