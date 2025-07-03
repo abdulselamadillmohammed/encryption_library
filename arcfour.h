@@ -24,5 +24,5 @@ struct s_arcfour {
 typedef struct s_arcfour Arcfour; 
 
 export Arcfour *rc4init(int8*, int16);
-int8 rc4byte(void);
-export int8 *rc4encrypt(int8*, int16);
+int8 rc4byte(Arcfour *p);
+export int8 *rc4encrypt(Arcfour *, int8*, int16);

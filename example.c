@@ -31,12 +31,10 @@ void printbin(int8 *input, const int16 size){
 int main(){
     Arcfour *rc4;
     int16 skey, stext;
-    char *key, *from, *to, *encrypted, *decrypted;
+    char *key, *from;
 
-    key = from = encrypted = decrypted = 0;
-    from = key;
+    int8  *encrypted, *decrypted;    
 
-    skey = stext = 0;
 
     key = "tomatoes"; // change to RSA 2048 keygen later
     skey = strlen(key);
