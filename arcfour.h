@@ -17,7 +17,7 @@ typedef unsigned short int int16;
 typedef unsigned int int32;
 
 struct s_arcfour {
-    int8 i,j,k;
+    int16 i,j,k;
     int8 s[256];
 };
 

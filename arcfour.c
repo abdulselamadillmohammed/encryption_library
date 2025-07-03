@@ -5,15 +5,17 @@
 #include "arcfour.h"
 
 Arcfour *rc4init(int8 *key, int16 size){
-    int8 x;
+    int16 x;
     int8 tmp1, tmp2;
     Arcfour *p;
 
-
-    if (p = malloc(sizeof(struct s_arcfour)))
-        assert_perror(errno);
+ 
+    if (!(p = malloc(sizeof(struct s_arcfour)))){
+        perror("Error");
+        assert(0);  // or exit(EXIT_FAILURE);
+    }
     
-    for (x=0; x<0256; x++)
+    for (x=0; x<256; x++)
         p->s[x] = 0;
     p->i = p->j = p->k = 0;
     tmp1 = tmp2 = 0;

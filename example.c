@@ -45,7 +45,7 @@ int main(){
     stext = strlen(from);
 
     printf("Intializing encryption..."); F;
-    rc4 = rc4init(key, skey); // check if it returns 0 in prod, cause of malloc checking
+    rc4 = rc4init((int8 *) key, skey); // check if it returns 0 in prod, cause of malloc checking
     printf("done\n");
 
     printf("'%s'\n ->", from);
