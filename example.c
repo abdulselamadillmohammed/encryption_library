@@ -36,7 +36,7 @@ int main(){
     int8  *encrypted, *decrypted;    
 
 
-    key = "tomatoes"; // change to RSA 2048 keygen later
+    key = "tomatoes"; // change to RSA 2048 keygen later!!
     skey = strlen(key);
 
     from = "Shall I compare thee to a summer's day?";

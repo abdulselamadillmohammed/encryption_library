@@ -8,7 +8,7 @@
 #include <assert.h>
 #include <errno.h>
 
-#define MS                  100
+#define MS                  500 // can be slow depending on CPU
 #define export              __attribute__((visibility("default")))
 #define rc4decrypt(x,y,z)   rc4encrypt(x,y,z)
 #define rc4uninit(x)        free(x)
