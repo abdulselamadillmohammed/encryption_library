@@ -1,3 +1,5 @@
+// https://en.wikipedia.org/wiki/RC4
+
 /* arcfour.c */
 
 #include "arcfour.h"
